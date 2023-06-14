@@ -1,10 +1,10 @@
-set(CRADLE_COMMIT_HASH "f5f2d909c804c8c65a330fdc0a124234ea0937e2")
+set(CRADLE_COMMIT_HASH "f7085980707e80025eecaffb50fd162989572125")
 
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO open-cradle/cradle
   REF ${CRADLE_COMMIT_HASH}
-  SHA512 81f6118ab0ba687d0ee2685eefd300c2f58d34ee1ba7c70e1a3f2e4de37900875ecf003836182bd5df7bb0755834817336b2d4a195532f366a47f51fe5674653)
+  SHA512 ad0ca1ccc7255e34d50a61e0edbfb12ee6ae57774cd7f040d07a1f9b2fe1cde877af232d3c0727e44b9108b139d0d4e2253468e2974e028f39bd9f40594a9874)
 
 vcpkg_cmake_configure(
   SOURCE_PATH "${SOURCE_PATH}"
@@ -17,9 +17,9 @@ vcpkg_cmake_configure(
     -DCRADLE_INSTALL=ON)
 
 vcpkg_cmake_install()
-vcpkg_fixup_cmake_targets()
+vcpkg_cmake_config_fixup()
 
 file(
-  INSTALL "${SOURCE_PATH}/LICENSE"
+  INSTALL "${SOURCE_PATH}/LICENSE.txt"
   DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}"
   RENAME copyright)
