@@ -38,6 +38,8 @@
         "vcpkg-cmake",
         "websocketpp",
         "yaml-cpp",
-        "zlib"
+        "zlib",
+        "vcpkg-cmake",
+        "vcpkg-cmake-config"
     ]
 }
