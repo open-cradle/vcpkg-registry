@@ -14,7 +14,11 @@ vcpkg_cmake_configure(
     -DCRADLE_PREPROCESSOR_USAGE=GitCache
     -DCRADLE_IS_MAIN_PROJECT=OFF
     -DCRADLE_ENABLE_TESTING=OFF
-    -DCRADLE_INSTALL=ON)
+    -DCRADLE_INSTALL=ON
+    # Override vcpkg's attempt to disable FetchContent.
+    # (We only use FetchContent for cppcoro, so in the future it would be nice
+    # to get this through vcpkg as well.)
+    -DFETCHCONTENT_FULLY_DISCONNECTED=OFF)
 
 vcpkg_cmake_install()
 vcpkg_cmake_config_fixup()
