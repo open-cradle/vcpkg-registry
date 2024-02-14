@@ -1,7 +1,7 @@
 {
     "name": "cradle",
     "version": "0.1.0",
-    "port-version": 1,
+    "port-version": 2,
     "description": "a framework for declarative computation at interactive speeds",
     "homepage": "https://github.com/open-cradle/cradle",
     "dependencies": [
