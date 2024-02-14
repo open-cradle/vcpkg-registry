@@ -6,6 +6,10 @@ vcpkg_from_github(
   REF ${CRADLE_COMMIT_HASH}
   SHA512 e7ee935c8a2642ca8631f2a2f83558d6ce89cb5f4a65a09ab77216f914ed02d79a3f48e7f31651c3d455412f6e72137d77a5d04ae53dc55113a691190d8ab1f8)
 
+vcpkg_find_acquire_program(GIT)
+get_filename_component(GIT_PATH "${GIT}" DIRECTORY)
+vcpkg_add_to_path("${GIT_PATH}")
+
 vcpkg_cmake_configure(
   SOURCE_PATH "${SOURCE_PATH}"
   OPTIONS
