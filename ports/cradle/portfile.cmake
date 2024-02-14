@@ -1,14 +1,10 @@
-set(CRADLE_COMMIT_HASH "b8a6c836694f90a7593966ee7cb2c2f19a15b8f7")
+set(CRADLE_COMMIT_HASH "deb2cabac1d015803320f3dca462fb762343b7e5")
 
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO open-cradle/cradle
   REF ${CRADLE_COMMIT_HASH}
-  SHA512 e7ee935c8a2642ca8631f2a2f83558d6ce89cb5f4a65a09ab77216f914ed02d79a3f48e7f31651c3d455412f6e72137d77a5d04ae53dc55113a691190d8ab1f8)
-
-vcpkg_find_acquire_program(GIT)
-get_filename_component(GIT_PATH "${GIT}" DIRECTORY)
-vcpkg_add_to_path("${GIT_PATH}")
+  SHA512 22092e3143925bfce11cc8a9d8aff6a06fa432f136331da60aa040c5f7931df40b210e6d652b7fc1baa23ce88c8e5761e65c68ddb1bf2976371b56fe29409054)
 
 vcpkg_cmake_configure(
   SOURCE_PATH "${SOURCE_PATH}"
